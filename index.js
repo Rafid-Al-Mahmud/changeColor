@@ -24,7 +24,7 @@ app.post("/register", (req, res) => {
   const bg = req.body.bg;
   res.send(`
   <h2>BG: ${bg}</h2>
-  <script>location.replace("http://192.168.0.102:8080/register")</script>
+  <script>location.replace("https://rafid.up.railway.app/register")</script>
   `);
   let x = `
   {
