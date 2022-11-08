@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const HOSTNAME = "192.168.0.102";
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 const bodyParser = require("body-parser");
 const fs = require("fs");
 
@@ -37,6 +37,6 @@ app.post("/register", (req, res) => {
   });
 });
 
-app.listen(() => {
+app.listen(PORT, () => {
   console.log(`Server is running at http://${HOSTNAME}:${PORT}`);
 });
