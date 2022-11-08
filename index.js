@@ -37,6 +37,6 @@ app.post("/register", (req, res) => {
   });
 });
 
-app.listen(PORT, HOSTNAME, () => {
+app.listen(() => {
   console.log(`Server is running at http://${HOSTNAME}:${PORT}`);
 });
