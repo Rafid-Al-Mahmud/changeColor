@@ -28,10 +28,15 @@ app.post("/register", (req, res) => {
         background-image: url('https://i.pinimg.com/originals/2e/9c/68/2e9c6878eae5bbcdaa2d07ed4dbd79b8.gif');
         background-position: center;
         background-attachment: fixed;
-        background-size: 100px;
+        background-size: 50%;
         background-repeat: no-repeat;
         background-color: #222222;
       }
+@media only screen and (max-width: 600px) {
+  * {
+    background-size: 100%;
+  }
+}
     </style>
   <h2>BG: ${bg}</h2>
   <script>/*location.replace("https://rafid.up.railway.app/register")*/history.back();</script>
