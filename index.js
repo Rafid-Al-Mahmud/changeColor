@@ -24,6 +24,8 @@ app.post("/register", (req, res) => {
   const bg = req.body.bg;
   res.send(`
     <style>
+<html>
+<head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
       *{
         background-image: url('https://i.pinimg.com/originals/2e/9c/68/2e9c6878eae5bbcdaa2d07ed4dbd79b8.gif');
@@ -39,6 +41,8 @@ app.post("/register", (req, res) => {
   }
 }
     </style>
+</head>
+<body>
   <h2>BG: ${bg}</h2>
   <script>/*location.replace("https://rafid.up.railway.app/register")*/history.back();</script>
   `);
@@ -46,6 +50,8 @@ app.post("/register", (req, res) => {
   {
     "bg": "${bg}" 
   }
+</body>
+</html>
   `;
   fs.writeFile('example.json', x, function (err) {
     if (err) throw err;
