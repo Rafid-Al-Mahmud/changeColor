@@ -39,7 +39,7 @@ app.post("/register", (req, res) => {
 }
     </style>
   <h2>BG: ${bg}</h2>
-  <script>/*location.replface("https://rafid.up.railway.app/register")*/history.back();</script>
+  <script>/*location.replace("https://rafid.up.railway.app/register")*/history.backk();</script>
   `);
   let x = `
   {
