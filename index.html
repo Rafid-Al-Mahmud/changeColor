@@ -30,6 +30,9 @@
       align-items: center;
       justify-content: center;
     }
+    #box>div:nth-child(1){
+      height: 100px;
+    }
     .box>div:hover{
       cursor: pointer;
     }
@@ -66,7 +69,7 @@
   </form>
   <h3>Change Colors<span style="color:gray;">(By Click)</span></h3>
   <h4>Default Colors:</h4>
-  <div class="box">
+  <div class="box" id="defaultBox">
     <div onclick="changeColor('#ff0000')" style="background-color: #ff0000;">RED</div>
     <div onclick="changeColor('#008000')" style="background-color: #008000;">GREEN</div>
     <div onclick="changeColor('#0000ff')" style="background-color: #0000ff;">BLUE</div>
