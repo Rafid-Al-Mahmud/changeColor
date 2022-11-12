@@ -25,7 +25,6 @@
       margin: 10px;
       box-shadow: 0 0 10px 5px #eeea;
       width: 100px;
-      height: 100px;
       border-radius: 10px;
       flex-wrap: wrap;
       align-items: center;
@@ -67,7 +66,7 @@
   </form>
   <h3>Change Colors<span style="color:gray;">(By Click)</span></h3>
   <h4>Default Colors:</h4>
-  <div id="box" style="display: flex;flex-wrap: wrap">
+  <div class="box">
     <div onclick="changeColor('#ff0000')" style="background-color: #ff0000;">RED</div>
     <div onclick="changeColor('#008000')" style="background-color: #008000;">GREEN</div>
     <div onclick="changeColor('#0000ff')" style="background-color: #0000ff;">BLUE</div>
@@ -80,7 +79,7 @@
   </div>
   <h4>Tailwind Colors:</h4>
   <h5>Red</h5>
-  <div id="box" style="display: flex;flex-wrap: wrap">
+  <div class="box">
     <div onclick="changeColor('#FEF2F2')" style="background-color: #FEF2F2">50</div>
     <div onclick="changeColor('#FEE2E2')" style="background-color: #FEE2E2">100</div>
     <div onclick="changeColor('#FECACA')" style="background-color: #FECACA">200</div>
@@ -93,7 +92,7 @@
     <div onclick="changeColor('#7F1D1D')" style="background-color: #7F1D1D">900</div>
   </div>
   <h5>Orange</h5>
-  <div id="box" style="display: flex;flex-wrap: wrap">
+  <div class="box">
     <div onclick="changeColor('#FEF2F2')" style="background-color: #FEF2F2">50</div>
     <div onclick="changeColor('#FEE2E2')" style="background-color: #FEE2E2">100</div>
     <div onclick="changeColor('#FECACA')" style="background-color: #FECACA">200</div>
