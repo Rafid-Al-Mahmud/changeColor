@@ -50,8 +50,6 @@ app.post("/register", (req, res) => {
   {
     "bg": "${bg}" 
   }
-</body>
-</html>
   `;
   fs.writeFile('example.json', x, function (err) {
     if (err) throw err;
