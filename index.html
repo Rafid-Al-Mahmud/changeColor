@@ -115,11 +115,7 @@ var getContrastYIQ = function(color) {
     r = parseInt(color.substr(1, 2), 16);
     g = parseInt(color.substr(3, 2), 16);
     b = parseInt(color.substr(5, 2), 16);
-  } /*else if (/^rgb/.test(color)) {
-    r = parseInt(color.substr(4, 3));
-    g = parseInt(color.substr(8, 3));
-    b = parseInt(color.substr(12, 3));
-  } */else {
+  } else {
     color = color.match(/\d+/g);
     r = color[0];
     g = color[1];
@@ -130,11 +126,16 @@ var getContrastYIQ = function(color) {
   return (yiq >= 128) ? 'black' : 'white';
 }
 
-var r = document.querySelectorAll("#box>div");
-for (var i = 0; i < r.length; i++) {
-    r[i].style.color = getContrastYIQ(r[i].style.backgroundColor);
+var rr = document.querySelectorAll("#box>div");
+for (var i = 0; i < rr.length; i++) {
+    rr[i].style.color = getContrastYIQ(rr[i].style.backgroundColor);
 }
-
+/*else if (/^rgb/.test(color)) {
+    r = parseInt(color.substr(4, 3));
+    g = parseInt(color.substr(8, 3));
+    b = parseInt(color.substr(12, 3));
+  } */
+  
 var pbg = "";
 var cbg = document.getElementsByName("bg")[0].value;
     function changeColor(color_name) {
