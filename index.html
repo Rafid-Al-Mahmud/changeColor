@@ -97,7 +97,7 @@ var getContrastYIQ = function(color) {
   return (yiq >= 128) ? 'black' : 'white';
 }
 
-var r = document.getElementsByName("#box>div");
+var r = document.querySelectorAll("#box>div");
 for (var i = 0; i < r.length; i++) {
     els[i].style.color = getContrastYIQ(els[i].style.backgroundColor);
 }
