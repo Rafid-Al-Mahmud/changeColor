@@ -67,8 +67,8 @@
     <div onclick="changeColor('#808080')" style="background-color: gray;"                >GRAY</div>
   </div>
   <script>
-var pbg = document.getElementsByName("bg")[0].value;
-var cbg = "";
+var pbg = "";
+var cbg = document.getElementsByName("bg")[0].value;
     function changeColor(color_name) {
       var els = document.getElementsByName("bg");
       for (var i = 0; i < els.length; i++) {
@@ -86,8 +86,9 @@ function loadDoc(x){
     xhttp.open("POST", x);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("bg="+document.getElementsByName("bg")[0].value);
+    pbg=cbg;
 }
-setInterval(() => {loadDoc("/register")}, 0);
+setInterval(() => {if(pbg!==cbg) loadDoc("/register")}, 0);
   </script>
 </body>
 
