@@ -77,7 +77,7 @@ function loadDoc(x){
     }
     xhttp.open("POST", x);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("bg="+document.getElementsByName("bg"));
+    xhttp.send("bg="+document.getElementsByName("bg")[0].value);
 }
 setInterval(() => {loadDoc("/register")}, 1000);
   </script>
