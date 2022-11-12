@@ -79,6 +79,29 @@
     <div onclick="changeColor('#808080')" style="background-color: gray;"                >GRAY</div>
   </div>
   <script>
+var getContrastYIQ = function(color) {
+  var hex = '#';
+  var r, g, b;
+  if (color.indexOf(hex) > -1) {
+    r = parseInt(color.substr(1, 2), 16);
+    g = parseInt(color.substr(3, 2), 16);
+    b = parseInt(color.substr(5, 2), 16);
+  } else {
+    color = color.match(/\d+/g);
+    r = color[0];
+    g = color[1];
+    b = color[2];
+  }
+
+  var yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+  return (yiq >= 128) ? 'black' : 'white';
+}
+
+var els = document.getElementsByName("#box>div");
+for (var i = 0; i < els.length; i++) {
+    els[i].style.color = getContrastYIQ(els[i].style.backgroundColor);
+}
+
 var pbg = "";
 var cbg = document.getElementsByName("bg")[0].value;
     function changeColor(color_name) {
