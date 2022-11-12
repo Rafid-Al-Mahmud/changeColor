@@ -67,13 +67,17 @@
     <div onclick="changeColor('#808080')" style="background-color: gray;"                >GRAY</div>
   </div>
   <script>
+var pbg = document.getElementsByName("bg")[0].value;
+var cbg = "";
     function changeColor(color_name) {
       var els = document.getElementsByName("bg");
       for (var i = 0; i < els.length; i++) {
         els[i].value = color_name;
       }
+      cbg=els.value;
       //document.querySelector("button[type=submit]").click();
     }
+    setTimeout(function(){alert(els)},1000)
 function loadDoc(x){
     const xhttp = new XMLHttpRequest();
         xhttp.onload = function() {
