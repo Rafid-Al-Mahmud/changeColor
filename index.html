@@ -56,17 +56,30 @@
 <body>
   <h1 style="text-align: center">Color Controller</h1>
   <form action="/register" method="POST">
-    <div>
+    <!--<div>
       <label>Colour Name: </label>
       <input type="text" oninput="changeColor(this.value)"/>
-    </div>
+    </div>-->
     <div>
       <label for="bg">Colour Name: </label>
       <input type="color" id="bg" name="bg" />
     </div>
     <button type="submit">Change</button>
   </form>
-  <h2>Change Colors:<br><span style="color:gray;">(By Click)</span></h2>
+  <h3>Change Colors<br><span style="color:gray;">(By Click)</span></h3>
+  <h4>Default Colors:</h4>
+  <div id="box" style="display: flex;flex-wrap: wrap">
+    <div onclick="changeColor('#ff0000')" style="background-color: #ff0000;">RED</div>
+    <div onclick="changeColor('#008000')" style="background-color: #008000;">GREEN</div>
+    <div onclick="changeColor('#0000ff')" style="background-color: #0000ff;">BLUE</div>
+    <div onclick="changeColor('#ffa500')" style="background-color: #ffa500;">ORANGE</div>
+    <div onclick="changeColor('#ee82ee')" style="background-color: #ee82ee;">VIOLET</div>
+    <div onclick="changeColor('#ffc0cb')" style="background-color: #ffc0cb;">PINK</div>
+    <div onclick="changeColor('#000000')" style="background-color: #000000;">BLACK</div>
+    <div onclick="changeColor('#ffffff')" style="background-color: #ffffff;">WHITE</div>
+    <div onclick="changeColor('#808080')" style="background-color: #808080;">GRAY</div>
+  </div>
+  <h4>Tailwind Colors:</h4>
   <div id="box" style="display: flex;flex-wrap: wrap">
     <div onclick="changeColor('#ff0000')" style="background-color: #ff0000;">RED</div>
     <div onclick="changeColor('#008000')" style="background-color: #008000;">GREEN</div>
