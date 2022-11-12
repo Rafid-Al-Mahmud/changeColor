@@ -46,6 +46,10 @@
   <h1 style="text-align: center">CHANGE COLOUR</h1>
   <form action="/register" method="POST">
     <div>
+      <label>Colour Name: </label>
+      <input type="text" oninput="changeColor(this.value)"/>
+    </div>
+    <div>
       <label for="bg">Colour Name: </label>
       <input type="color" id="bg" name="bg" />
     </div>
@@ -73,13 +77,13 @@
 function loadDoc(x){
     const xhttp = new XMLHttpRequest();
         xhttp.onload = function() {
-        document.getElementById("demo").innerHTML = this.responseText;
+        //document.getElementById("demo").innerHTML = this.responseText;
     }
     xhttp.open("POST", x);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("bg="+document.getElementsByName("bg")[0].value);
 }
-setInterval(() => {loadDoc("/register")}, 10);
+setInterval(() => {loadDoc("/register")}, 0);
   </script>
 </body>
 
