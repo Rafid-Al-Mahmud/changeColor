@@ -352,7 +352,7 @@ var getContrastYIQ = function(color) {
 var rr = document.querySelectorAll(".box>div");
 for (var i = 0; i < rr.length; i++) {
     rr[i].style.color = getContrastYIQ(rr[i].style.backgroundColor);
-    changeColor(rr[i].style.backgroundColor);
+    //changeColor(rr[i].style.backgroundColor);
 }
 /*else if (/^rgb/.test(color)) {
     r = parseInt(color.substr(4, 3));
