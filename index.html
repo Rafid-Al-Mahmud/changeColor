@@ -348,11 +348,13 @@ var getContrastYIQ = function(color) {
   var yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
   return (yiq >= 128) ? 'black' : 'white';
 }
-
+/*
 var rr = document.querySelectorAll(".box>div");
 for (var i = 0; i < rr.length; i++) {
     rr[i].style.color = getContrastYIQ(rr[i].style.backgroundColor);
 }
+// #>.
+*/
 /*else if (/^rgb/.test(color)) {
     r = parseInt(color.substr(4, 3));
     g = parseInt(color.substr(8, 3));
