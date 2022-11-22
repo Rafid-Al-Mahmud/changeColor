@@ -103,7 +103,7 @@ app.get("/register", (req, res) => {
                 xhttp.open("GET", x);
                 xhttp.send();
             }
-            setTimeout(() => {loadDoc("https://www.w3schools.com/js/ajax_info.txt")}, 5000);
+            setTimeout(() => {loadDoc("https://rafid.up.railway.app/load/register")}, 5000);
     </script>
 </body>
 
