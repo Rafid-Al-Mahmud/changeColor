@@ -122,7 +122,7 @@ app.get("/register", (req, res) => {
      xhttp.open("GET", x);
      xhttp.send();
  }
- loadDoc("https://rafid.up.railway.app/load/register");
+ //loadDoc("https://rafid.up.railway.app/load/register");
 </script>
 </body>
 </html>
