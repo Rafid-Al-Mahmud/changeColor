@@ -1,9 +1,11 @@
 const express = require("express");
+const express = require("compression");
 const app = express();
 const HOSTNAME = "192.168.0.102";
 const PORT = process.env.PORT || 8080;
 const bodyParser = require("body-parser");
 const fs = require("fs");
+app.use(compression());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -122,7 +124,7 @@ app.get("/register", (req, res) => {
      xhttp.open("GET", x);
      xhttp.send();
  }
- //loadDoc("https://rafid.up.railway.app/load/register");
+ loadDoc("https://rafid.up.railway.app/load/register");
 </script>
 </body>
 </html>
