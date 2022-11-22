@@ -1,11 +1,9 @@
 const express = require("express");
-const compression = require("compression");
 const app = express();
 const HOSTNAME = "192.168.0.102";
 const PORT = process.env.PORT || 8080;
 const bodyParser = require("body-parser");
 const fs = require("fs");
-app.use(compression());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
