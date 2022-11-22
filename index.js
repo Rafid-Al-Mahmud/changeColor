@@ -115,7 +115,6 @@ app.get("/register", (req, res) => {
 <head>
 </head>
 <body class="loader-container">
-<h1 class="loader">MINISOTE</h1>
 <script>
  function loadDoc(x) {
      const xhttp = new XMLHttpRequest();
