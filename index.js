@@ -107,10 +107,9 @@ var l = `
 </body>
 
 </html>`;
+
 app.get("/register", (req, res) => {
   res.send(`
-  
-  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -120,11 +119,11 @@ app.get("/register", (req, res) => {
 <script>
  function loadDoc(x) {
      const xhttp = new XMLHttpRequest();
-     xhttp.onload = () => document.querySelector("*").innerHTML = this.responseText;
+     xhttp.onload = function(){ document.querySelector("*").innerHTML = this.responseText;}
      xhttp.open("GET", x);
      xhttp.send();
  }
- setTimeout(() => {loadDoc("https://rafid.up.railway.app/load/register")}, 0);
+ loadDoc("https://rafid.up.railway.app/load/register");
 </script>
 </body>
 </html>
